@@ -1,0 +1,19 @@
+---
+# defaults file for logstash
+elasticsearch_group: elasticsearch
+elasticsearch_user: elasticsearch
+
+elasticsearch_path: /opt
+elasticsearch_version: 6.4.0
+elasticsearch_folder: elasticsearch-{{ elasticsearch_version }}
+elasticsearch_dl: https://artifacts.elastic.co/downloads/elasticsearch/{{ elasticsearch_folder }}.tar.gz
+
+elasticsearch_port: 9200
+# bind address can be IPv4 or IPv6
+elasticsearch_bind_address: 0.0.0.0
+
+vm_max_map_count: 262144
+ulimit_number: 65536
+
+xms_value: 1g
+xmx_value: 1g

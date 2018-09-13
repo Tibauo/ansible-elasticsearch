@@ -1,0 +1,12 @@
+[Unit]
+Description=Elasticsearch
+Documentation=https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started.html
+
+[Service]
+User={{ elasticsearch_group }}
+Group={{ elasticsearch_user }}
+LimitNOFILE={{ ulimit_number }}
+ExecStart={{ elasticsearch_path }}/{{ elasticsearch_folder }}/bin/elasticsearch
+
+[Install]
+WantedBy=multi-user.target
